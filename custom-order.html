@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order | Sparkle</title>
+    <title>Custom Order | Sparkle</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -23,11 +23,43 @@
     </header>
 
     <section class="page-header">
-        <h1>Custom Order</h1>
+        <h1>Custom Made to Order</h1>
         <p>Jewellery for souls who love a little bling 💍✨</p>
     </section>
 
+    <section class="custom-intro">
+        <div class="custom-intro-content">
+            <h2>Let’s create something special together</h2>
+            <p class="lead-text">
+                Custom made to order jeweller for souls who love a little bling!! 💍✨<br>
+                Choose a design. Discuss measurements, beads and findings with me (the fun part!!).<br>
+                Order takes <strong>2 weeks</strong> to make.
+            </p>
+            <p>
+                This is an endeavour to celebrate all things shiny, sparkling and beautiful that make you go <em>oooooh!!</em>
+            </p>
+            <div class="custom-steps">
+                <div class="step">
+                    <span class="step-num">1</span>
+                    <h3>Choose a design</h3>
+                    <p>Pick something from the collection or describe your own idea.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <h3>Discuss the details</h3>
+                    <p>Measurements, beads, findings &amp; colours – the fun part!</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <h3>Handmade for you</h3>
+                    <p>Your piece is carefully made at home within 2 weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="order-section">
+        <h2 style="text-align:center; margin-bottom:1.5rem;">Request Your Custom Piece</h2>
         <form id="orderForm" class="order-form">
             <div class="form-group">
                 <label for="name">Your Name *</label>
@@ -42,29 +74,18 @@
                 <input type="tel" id="phone" name="phone">
             </div>
             <div class="form-group">
-                <label for="product">Product / Category *</label>
-                <select id="product" name="product" required>
-                    <option value="">Select...</option>
-                    <option value="earrings">Earrings</option>
-                    <option value="necklaces">Necklaces</option>
-                    <option value="bracelets">Bracelets</option>
-                    <option value="rings">Rings</option>
-                    <option value="custom">Custom Design</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="details">Details / Custom Ideas *</label>
-                <textarea id="details" name="details" rows="5" placeholder="Describe the style, colors, materials or any special requests..." required></textarea>
+                <label for="design">Design idea / inspiration *</label>
+                <textarea id="design" name="design" rows="4" placeholder="Describe the style, colours, beads, size or any special idea you have..." required></textarea>
             </div>
             <div class="form-group">
                 <label for="budget">Approx. Budget (EUR)</label>
-                <input type="number" id="budget" name="budget" min="0" step="5">
+                <input type="number" id="budget" name="budget" min="0" step="5" placeholder="e.g. 35">
             </div>
-            <button type="submit" class="btn">Send Order Request</button>
+            <button type="submit" class="btn">Send Custom Order Request</button>
         </form>
         <div id="formSuccess" class="form-success" style="display:none;">
-            <h3>Thank you!</h3>
-            <p>Your request has been received. We will contact you soon by email.</p>
+            <h3>Thank you! ✨</h3>
+            <p>Your custom order request has been received. I will contact you soon by email to discuss the fun details!</p>
         </div>
     </section>
 

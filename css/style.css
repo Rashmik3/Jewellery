@@ -490,3 +490,88 @@ footer {
         order: -1;
     }
 }
+
+/* Custom Order Page */
+.custom-intro {
+    padding: 3rem 5%;
+    background: var(--white);
+}
+
+.custom-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.custom-intro-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.lead-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.custom-intro-content p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.custom-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.step {
+    background: var(--light);
+    padding: 1.8rem 1.2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.step h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step p {
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+/* Custom highlight box on Home & About */
+.custom-highlight {
+    background: linear-gradient(135deg, var(--gold-light), #fdf2f4);
+    padding: 2.5rem 5%;
+    text-align: center;
+}
+
+.custom-highlight h2 {
+    margin-bottom: 1rem;
+}
+
+.custom-highlight p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    color: var(--dark);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
