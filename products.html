@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Sparkle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">✨ Sparkle</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="new-products.html">New Arrivals</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Our Collection</h1>
+        <p>Handcrafted pieces for every occasion</p>
+    </section>
+
+    <section class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="earrings">Earrings</button>
+        <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+        <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+        <button class="filter-btn" data-filter="rings">Rings</button>
+    </section>
+
+    <section class="products-section">
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded by JavaScript. 
+                 If you see this text, the js/script.js file is missing or not loading. -->
+            <p style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: #666;">
+                Loading products... If this message stays, make sure the <strong>js</strong> folder is next to this HTML file.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">✨ Sparkle</div>
+            <p>Handmade jewellery with heart</p>
+            <p class="copyright">© 2026 Sparkle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof products !== 'undefined') {
+                renderProducts(products);
+                setupFilters();
+            } else {
+                document.getElementById('productsGrid').innerHTML = 
+                    '<p style="grid-column:1/-1;text-align:center;color:red;">Error: products data not found. Check that js/script.js is in the correct folder.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals | Sparkle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">✨ Sparkle</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="new-products.html" class="active">New Arrivals</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>New Arrivals</h1>
+        <p>Fresh pieces freshly made this month</p>
+    </section>
+
+    <section class="products-section">
+        <div class="products-grid" id="newProductsGrid">
+            <p style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: #666;">
+                Loading new products...
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">✨ Sparkle</div>
+            <p>Handmade jewellery with heart</p>
+            <p class="copyright">© 2026 Sparkle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof products !== 'undefined') {
+                var newOnes = products.filter(function(p) { return p.isNew; });
+                renderProducts(newOnes, 'newProductsGrid');
+            } else {
+                document.getElementById('newProductsGrid').innerHTML = 
+                    '<p style="grid-column:1/-1;text-align:center;color:red;">Error: products data not found. Check that the js folder is next to this file.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
